@@ -66,7 +66,7 @@ jobs:
           https://api.mailgun.net/v3/devops.faithnte.com/messages \
           -F from="CI Pipeline <hireme@faithnte.com>" \
           -F to="o.oluwapelumi@gmail.com" \
-          -F to="faithskool4u@gmail.com"
+          -F to="faithskool4u@gmail.com" \
           -F to="hireme@faithnte.com" \
           -F subject="CI Pipeline Status: Success" \
           -F text="The build artifact has been successfully created and uploaded to S3." \
