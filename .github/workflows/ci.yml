@@ -48,7 +48,10 @@ jobs:
 
       - name: Verify artifact
         run: ls -la address-book-python-*.zip
-
+      
+      - name: Verify AWS CLI Configuration
+        run: aws configure list
+      
       - name: Upload artifact to S3
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
