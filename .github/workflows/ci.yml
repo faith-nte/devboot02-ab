@@ -72,16 +72,16 @@ jobs:
         env:
             AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            AWS_DEFAULT_REGION: us-east-1
+            AWS_DEFAULT_REGION: eu-north-1
 
       # Final Step: Send email notification
       - name: Send email notification
         run: |
           curl -s --user "api:${{ secrets.MAILGUN_API_KEY }}" \
-          https://api.mailgun.net/v3/devforge.cc/messages \
-          -F from="CI Pipeline <mailgun@devforge.cc>" \
-          -F to="faithskool4u@gmail.com" \
+          https://api.mailgun.net/v3/devops.faithnte.com/messages \
+          -F from="CI Pipeline <hireme@faithnte.com>" \
           -F to="o.oluwapelumi@gmail.com" \
+          -F to="hireme@faithnte.com" \
           -F subject="CI Pipeline Status: Success" \
           -F text="The build artifact has been successfully created and uploaded to S3." \
           -w "\nHTTP Status Code: %{http_code}\n"
