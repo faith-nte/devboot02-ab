@@ -57,7 +57,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: eu-north-1
-        run: aws s3 cp address-book-python-${{ env.TIMESTAMP }}.zip s3://simartefacts/
+        run: aws s3 cp address-book-python-${{ env.TIMESTAMP }}.zip s3://faithnte.com/
 
       # Final Step: Send email notification
       - name: Send email notification
