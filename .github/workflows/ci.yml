@@ -64,7 +64,7 @@ jobs:
         run: |
           curl -s --user "api:${{ secrets.MAILGUN_API_KEY }}" \
           https://api.mailgun.net/v3/devops.faithnte.com/messages \
-          -F from="CI Pipeline <hireme@faithnte.com>" \
+          -F from="CI Pipeline <test@devops.faithnte.com>" \
           -F to="o.oluwapelumi@gmail.com" \
           -F to="faithskool4u@gmail.com" \
           -F to="hireme@faithnte.com" \
